@@ -1,0 +1,124 @@
+---
+title: "Blog Template"
+author: "Daniel Fuller"
+date: '2023-03-29'
+output:
+  html_document:
+    keep_md: true
+---
+
+
+
+## Getting started
+
+The purpose of an INTERACT data science blog post is to provide a reproducible example and explanation of an advanced method used for INTERACT papers. There are lots of existing tutorials for very basic tasks like simple ML problems or making maps. What we want to do is get deeper with the tutorials and methods. 
+
+[stack overflow](https://stackoverflow.com/help/minimal-reproducible-example) describes a minimal, reproducible example as a the following:  
+
+- __Minimal:__ Use as little code as possible that still produces the same problem
+    - __Restart from scratch.__ Create a new program, adding in only what is needed to see the problem. Use simple, descriptive names for functions and variables – don’t copy the names you’re using in your existing code.
+    - __Divide and conquer.__ If you’re not sure what the source of the problem is, start removing code a bit at a time until the problem disappears – then add the last part back.
+
+- Complete: Provide all parts someone else needs to reproduce your problem in the question itself
+    - __DO NOT use images of code.__ Copy the actual text from your code editor, paste it into the question, then format it as code.
+    - __Use individual code blocks for each file or snippet you include.__ Provide a description for the purpose of each block.
+
+- Reproducible: Test the code you're about to provide to make sure it reproduces the problem
+  - __Describe the problem.__ "It doesn't work" isn't descriptive enough to help people understand your problem. Instead, tell other readers what the expected behavior should be. Tell other readers what the exact wording of the error message is, and which line of code is producing it. Use a brief but descriptive summary of your problem as the title of your question.
+  - __Eliminate any issues that aren't relevant to the problem.__ If your question isn’t about a compiler error, ensure that there are no compile-time errors. Use a program such as JSLint to validate interpreted languages. Validate any HTML or XML.
+
+The basic idea is as follows:  
+
+1. Show the data 
+2. Provide all of the code to produce the results 
+3. Provide interpretive discussion of the output at each step
+
+## Data and packages
+
+### Packages and dependencies
+
+Make sure to provide a list of all necessary packages to run the analysis. This should be a done with a clear code block at the beginning of the script. You should also provide the version numbers for R, RStudio, Python, and the packages that you are using. Provide links to the packages if you want to be really complete. 
+
+
+The required packages for this post are:  
+
+
+```r
+library(tidyverse)
+```
+
+```
+## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──
+```
+
+```
+## ✔ ggplot2 3.4.0     ✔ purrr   0.3.4
+## ✔ tibble  3.1.8     ✔ dplyr   1.0.9
+## ✔ tidyr   1.2.0     ✔ stringr 1.4.0
+## ✔ readr   2.1.2     ✔ forcats 0.5.1
+```
+
+```
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+```
+
+```r
+library(tidymodels)
+```
+
+```
+## ── Attaching packages ────────────────────────────────────── tidymodels 1.0.0 ──
+```
+
+```
+## ✔ broom        1.0.1     ✔ rsample      1.1.0
+## ✔ dials        1.0.0     ✔ tune         1.0.0
+## ✔ infer        1.0.3     ✔ workflows    1.0.0
+## ✔ modeldata    1.0.1     ✔ workflowsets 1.0.0
+## ✔ parsnip      1.0.1     ✔ yardstick    1.1.0
+## ✔ recipes      1.0.1
+```
+
+```
+## ── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──
+## ✖ scales::discard() masks purrr::discard()
+## ✖ dplyr::filter()   masks stats::filter()
+## ✖ recipes::fixed()  masks stringr::fixed()
+## ✖ dplyr::lag()      masks stats::lag()
+## ✖ yardstick::spec() masks readr::spec()
+## ✖ recipes::step()   masks stats::step()
+## • Use tidymodels_prefer() to resolve common conflicts.
+```
+
+```r
+library(sf)
+```
+
+```
+## Linking to GEOS 3.9.1, GDAL 3.4.2, PROJ 8.2.1; sf_use_s2() is TRUE
+```
+
+__Version info: Code for this page was tested using `R version 4.2.0`, `RStudio version 2022.02.2 Build 485`. With packages `tidyverse 1.3.1`, `tidymodels 1.0.0`, and `sf 1.0-7`.__
+
+### Data
+
+Provide a simple way to load the data. Because we are wanting to show more advanced work we probably won't be able to use toy datasets like `iris` or `cars`. You can upload the minimal required dataset to Github __(if allowed by ethics)__. When this is not the case, try and find a similar publicly available dataset. 
+
+```{}
+data <- read_csv("https://raw.githubusercontent.com/user/repo/master/data.csv")
+```
+
+### Writing
+
+The best and most complete data science type blogs I think are developed by the [UCLA Statistical Methods and Data Analytics site](https://stats.oarc.ucla.edu/). They have very well done [data analysis examples](https://stats.oarc.ucla.edu/other/dae/) across multiple statistical software including R, Stata, SAS, and SPSS. 
+
+The [Logistic Regression](https://stats.oarc.ucla.edu/r/dae/logit-regression/) data analysis example provides an excellent template for understanding the level of detail required. 
+
+For good spatial examples we recommend [Geocomputation with R](https://r.geocompx.org/index.html) as a great example of blog posts (or in this case a book) with detailed examples and explanations of output. The [spatial statistical learning](https://r.geocompx.org/spatial-cv.html) and [transportation](https://r.geocompx.org/transport.html) sections is a good examples of what a applied data science blog post might should look like. 
+
+
+
+
+
