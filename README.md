@@ -1,6 +1,6 @@
 # Blog Template
 
-The purpose of an INTERACT data science blog post is to provide a reproducible example and explanation of an advanced method used for INTERACT papers. You can see the full template and getting started page [here]() with `.Rmd` file available [here]().  There are lots of existing tutorials for very basic tasks like simple ML problems or making maps. What we want to do is get deeper with the tutorials and methods. 
+The purpose of an INTERACT data science blog post is to provide a reproducible example and explanation of an advanced method used for INTERACT papers. You can see the full template and getting started page [here](https://github.com/TeamINTERACT/blog_template/blob/main/blog_template.md) with `.Rmd` file available [here](https://github.com/TeamINTERACT/blog_template/blob/main/blog_template.Rmd).  There are lots of existing tutorials for very basic tasks like simple ML problems or making maps. What we want to do is get deeper with the tutorials and methods. 
 
 [stack overflow](https://stackoverflow.com/help/minimal-reproducible-example) describes a minimal, reproducible example as a the following:  
 
